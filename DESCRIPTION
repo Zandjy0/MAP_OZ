@@ -1,0 +1,23 @@
+Package: MAPPINGOZ
+Title: Mapping OZ
+Version: 1.0.0
+Date: 2019-01-25
+Authors@R: 
+    person(given = "Steven",
+           family = "Barbeaux",
+           role = c("aut","cre"),
+           email = "zandjyo@gmail.com")
+Description: This library houses a function to find census key and map addresses and evaluate whether the address is within the CDFI opportunity zones (OZ).
+Depends:
+	ggplot2,
+	devtools,
+	data.table,
+	xlsx,
+	tigris,
+Imports:
+Remotes: 
+      dkahle/ggmap
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
