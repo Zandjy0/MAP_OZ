@@ -1,28 +1,22 @@
-## Created by Steven J. Barbeaux January 25, 2019
-## function to find census key and map addresses
-## function also evaluates whether the address is within the CDFI opportunity zones (OZ)
-## to run this function you must obtain a google API key by setting up an account here (https://developers.google.com/maps/documentation/embed/get-api-key)
-## Instructions:
-## addresses can be input singularly following the format:
-# address="1600 Pennsylvania Avenue NW, Washington, DC, 20500"
-##
-## or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row seperate as in :
-##
-# addresses
-# "5339 ESSERVILLE RD, NORTON, VA, 24273"
-# "1305 11th Ave SE, Hickory, NC, 28602"
-# "1836 SUNDANCE CIR, Yadkinville, NC, 27055"
-# "514 Peach Street, Yadkinville, NC, 27055"
-##
-## ZOOM allows one to change the scale of the map from 1 (lowest resolution) to 20 (highest resolution).
-## OZ_CHECK set to TRUE causes the program to evaluate whether the property is within a CDFI OZ, FALSE skips this check.
-## MAP set to TRUE outputs map to either the screen or to PDF as described below.
-## PDF set to TRUE outputs a PDF file with the sattelite maps, one page per address. FALSE plots the maps in an R window.
-## PDF_NAME is the name of the PDF file to be exported.
-## XL_OUT set to TRUE exports an Excel file to the working directory of the addresses with Census tract id and OZ determination.
-## XL_NAME set to the name of the Excel file you wish to write, this program will over write any files of the same name.
-## API_KEY is the google API key for google maps.
-
+#' Map Opportunity Zones
+#' 
+#' A function to find census key, chart addresses, and evaluates whether the address is within the CDFI opportunity zones (OZ).
+#' To run this function you must obtain a google API key by setting up an account here (https://developers.google.com/maps/documentation/embed/get-api-key).
+#'
+#' Created by Steven J. Barbeaux January 25, 2019
+#' @param ADDRESS is the vector of address/es which can be input singularly following the format:/n address="1600 Pennsylvania Avenue NW, Washington, DC, 20500"/n or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row seperate as in :/n addresses:/n "5339 ESSERVILLE RD, NORTON, VA, 24273"/n "1305 11th Ave SE, Hickory, NC, 28602"/n "1836 SUNDANCE CIR, Yadkinville, NC, 27055"/n "514 Peach Street, Yadkinville, NC, 27055"/n
+#' @param ZOOM allows one to change the scale of the map from 1 (lowest resolution) to 20 (highest resolution).
+#' @param OZ_CHECK set to TRUE causes the program to evaluate whether the property is within a CDFI OZ, FALSE skips this check.
+#' @param MAP set to TRUE outputs map to either the screen or to PDF as described below.
+#' @param PDF set to TRUE outputs a PDF file with the sattelite maps, one page per address. FALSE plots the maps in an R window.
+#' @param PDF_NAME is the name of the PDF file to be exported.
+#' @param XL_OUT set to TRUE exports an Excel file to the working directory of the addresses with Census tract id and OZ determination.
+#' @param XL_NAME set to the name of the Excel file you wish to write, this program will over write any files of the same name.
+#' @param API_KEY is the google API key for google maps.
+#' @keywords OZ
+#' @export
+#' @examples
+#' MAP_OZ()
 
 MAP_OZ<-function(DIR=".",ADDRESS=address,ZOOM=17, OZ_CHECK=TRUE, MAP=TRUE,PDF=TRUE, PDF_NAME="MAPS.pdf", XL_OUT=FALSE ,XL_NAME="OZ_MAP.xlsx",API_KEY=api_key)
 {
