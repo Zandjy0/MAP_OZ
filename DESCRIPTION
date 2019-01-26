@@ -4,15 +4,9 @@ Version: 1.0.0
 Date: 2019-01-25
 Authors@R: as.person(c("Steve", "Barbeaux", , "zandjyo@gmail.com", role = c("aut", "cre")))
 Description: This library houses a function to find census key and map addresses and evaluate whether the address is within the CDFI opportunity zones (OZ).
-Depends:
-	ggplot2,
-	devtools,
-	data.table,
-	xlsx,
-	tigris,
+Depends:ggplot2,devtools,data.table,xlsx,tigris
 Imports:
-Remotes: 
-      dkahle/ggmap
+Remotes: dkahle/ggmap
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
