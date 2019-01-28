@@ -2,14 +2,23 @@
 % Please edit documentation in R/MAP_OZ.R
 \name{MAP_OZ}
 \alias{MAP_OZ}
-\title{Map Opportunity Zones}
+\title{Map Opportunity Zones \cr}
 \usage{
 MAP_OZ(DIR = ".", ADDRESS = address, ZOOM = 17, OZ_CHECK = TRUE,
   MAP = TRUE, PDF = TRUE, PDF_NAME = "MAPS.pdf", XL_OUT = FALSE,
   XL_NAME = "OZ_MAP.xlsx", API_KEY = api_key)
 }
 \arguments{
-\item{ADDRESS}{is the vector of address/es which can be input singularly following the format:/n address="1600 Pennsylvania Avenue NW, Washington, DC, 20500"/n or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row seperate as in :/n addresses:/n "5339 ESSERVILLE RD, NORTON, VA, 24273"/n "1305 11th Ave SE, Hickory, NC, 28602"/n "1836 SUNDANCE CIR, Yadkinville, NC, 27055"/n "514 Peach Street, Yadkinville, NC, 27055"/n}
+\item{ADDRESS}{is the vector of address/es which can be input singularly following the format: \cr
+  \cr
+address="1600 Pennsylvania Avenue NW, Washington, DC, 20500" \cr
+  \cr
+or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row seperate as in: \cr
+  \cr
+addresses \cr
+"5339 ESSERVILLE RD, NORTON, VA, 24273" \cr
+"1305 11th Ave SE, Hickory, NC, 28602" \cr
+"1836 SUNDANCE CIR, Yadkinville, NC, 27055" \cr}
 
 \item{ZOOM}{allows one to change the scale of the map from 1 (lowest resolution) to 20 (highest resolution).}
 
@@ -29,9 +38,7 @@ MAP_OZ(DIR = ".", ADDRESS = address, ZOOM = 17, OZ_CHECK = TRUE,
 }
 \description{
 A function to find census key, chart addresses, and evaluates whether the address is within the CDFI opportunity zones (OZ).
-To run this function you must obtain a google API key by setting up an account here (https://developers.google.com/maps/documentation/embed/get-api-key).
-}
-\details{
+To run this function you must obtain a google API key by setting up an account here (https://developers.google.com/maps/documentation/embed/get-api-key). \cr
 Created by Steven J. Barbeaux January 25, 2019
 }
 \examples{
