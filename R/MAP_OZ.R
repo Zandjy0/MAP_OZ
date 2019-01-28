@@ -1,10 +1,18 @@
-#' Map Opportunity Zones
-#' 
-#' A function to find census key, chart addresses, and evaluates whether the address is within the CDFI opportunity zones (OZ).
-#' To run this function you must obtain a google API key by setting up an account here (https://developers.google.com/maps/documentation/embed/get-api-key).
+#' Map Opportunity Zones \cr
 #'
+#' A function to find census key, chart addresses, and evaluates whether the address is within the CDFI opportunity zones (OZ).
+#' To run this function you must obtain a google API key by setting up an account here (https://developers.google.com/maps/documentation/embed/get-api-key). \cr
 #' Created by Steven J. Barbeaux January 25, 2019
-#' @param ADDRESS is the vector of address/es which can be input singularly following the format:/n address="1600 Pennsylvania Avenue NW, Washington, DC, 20500"/n or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row seperate as in :/n addresses:/n "5339 ESSERVILLE RD, NORTON, VA, 24273"/n "1305 11th Ave SE, Hickory, NC, 28602"/n "1836 SUNDANCE CIR, Yadkinville, NC, 27055"/n "514 Peach Street, Yadkinville, NC, 27055"/n
+#' @param ADDRESS is the vector of address/es which can be input singularly following the format: \cr
+#'   \cr
+#' address="1600 Pennsylvania Avenue NW, Washington, DC, 20500" \cr
+#'   \cr
+#' or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row seperate as in: \cr
+#'   \cr
+#' addresses \cr
+#' "5339 ESSERVILLE RD, NORTON, VA, 24273" \cr
+#' "1305 11th Ave SE, Hickory, NC, 28602" \cr
+#' "1836 SUNDANCE CIR, Yadkinville, NC, 27055" \cr
 #' @param ZOOM allows one to change the scale of the map from 1 (lowest resolution) to 20 (highest resolution).
 #' @param OZ_CHECK set to TRUE causes the program to evaluate whether the property is within a CDFI OZ, FALSE skips this check.
 #' @param MAP set to TRUE outputs map to either the screen or to PDF as described below.
