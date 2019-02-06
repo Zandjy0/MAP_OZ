@@ -54,7 +54,7 @@ MAP_OZ<-function(DIR=".",ADDRESS=address,ZOOM=17, OZ_CHECK=TRUE, MAP=TRUE,PDF=TR
   if(grepl(".CSV",toupper(ADDRESS))){ 
     address <- data.table(read.csv(paste0(DIR,"/",ADDRESS),stringsAsFactors=FALSE))
     } else if (grepl(".XLSX", toupper(ADDRESS))){
-      address <- data.table(read.xlsx(paste0(DIR,"/",ADDRESS), sheetIndex = 1))
+      address <- data.table(read.xlsx(paste0(DIR,"/",ADDRESS), sheet = 1))
     } else {address<-data.table(addresses=ADDRESS)}
 
 ## if there is more than one address check for duplicates and remove them
