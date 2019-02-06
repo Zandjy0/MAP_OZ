@@ -112,7 +112,7 @@ MAP_OZ<-function(DIR=".",ADDRESS=address,ZOOM=17, OZ_CHECK=TRUE, MAP=TRUE,PDF=TR
 ## if OZ_CHECK is true then pull OZ data from online and check it against geoid from addresses
   if(OZ_CHECK){
     if(!file.exists("CDFI_OZ.xlsx")){download.file(url="https://www.cdfifund.gov/Documents/Designated%20QOZs.12.14.18.xlsx",destfile="CDFI_OZ.xlsx", mode='wb',quiet = TRUE)}
-    OZ <- read.xlsx("CDFI_OZ.xlsx",sheetIndex=1)
+    OZ <- read.xlsx("CDFI_OZ.xlsx",sheet=1)
     names(OZ)=c("STATE","COUNTY","GEOID","DESIGNATION","YEARS")
     OZ<-data.table(OZ)
     OZ$GEOID<-as.character(OZ$GEOID)
