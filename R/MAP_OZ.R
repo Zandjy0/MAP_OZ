@@ -36,14 +36,14 @@ MAP_OZ<-function(DIR=".",ADDRESS=address,ZOOM=17, OZ_CHECK=TRUE, MAP=TRUE,PDF=TR
   if(!requireNamespace("devtools")) install.packages("devtools")
   if(!requireNamespace("ggmap")) devtools::install_github("dkahle/ggmap", ref = "tidyup")
   if(!requireNamespace("ggplot2")) install.packages("ggplot2")
-  if(!requireNamespace("xlsx")) install.packages("xlsx")
+  if(!requireNamespace("xlsx")) install.packages("openxlsx")
   if(!requireNamespace("tigris")) install.packages("tigris")
   library(grid)
   library(data.table)
   library(devtools)
   library(ggmap)
   library(ggplot2)
-  library(xlsx)
+  library(openxlsx)
   library(tigris)
   
  
