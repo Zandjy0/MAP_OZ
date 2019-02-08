@@ -7,7 +7,7 @@
 #'   \cr
 #' address="1600 Pennsylvania Avenue NW, Washington, DC, 20500" \cr
 #'   \cr
-#' or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row seperate as in: \cr
+#' or it can be input as a list in a .csv or .xlsx file with a column with the addresses named "addresses" and each row separate as in: \cr
 #'   \cr
 #' addresses \cr
 #' "5339 ESSERVILLE RD, NORTON, VA, 24273" \cr
@@ -16,7 +16,7 @@
 #' @param ZOOM allows one to change the scale of the map from 1 (lowest resolution) to 20 (highest resolution).
 #' @param OZ_CHECK set to TRUE causes the program to evaluate whether the property is within a CDFI OZ, FALSE skips this check.
 #' @param MAP set to TRUE outputs map to either the screen or to PDF as described below.
-#' @param PDF set to TRUE outputs a PDF file with the sattelite maps, one page per address. FALSE plots the maps in an R window.
+#' @param PDF set to TRUE outputs a PDF file with the satellite maps, one page per address. FALSE plots the maps in an R window.
 #' @param PDF_NAME is the name of the PDF file to be exported.
 #' @param XL_OUT set to TRUE exports an Excel file to the working directory of the addresses with Census tract id and OZ determination.
 #' @param XL_NAME set to the name of the Excel file you wish to write, this program will over write any files of the same name.
